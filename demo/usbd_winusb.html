@@ -6,21 +6,21 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>usbd_winusb &mdash; CherryUSB 1.5.2 documentation</title>
+  <title>WinUSB Device &mdash; CherryUSB 1.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=73275c37"></script>
+      <script src="../_static/documentation_options.js?v=72d88caf"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="usbd_webusb" href="usbd_webusb.html" />
-    <link rel="prev" title="usbd_video" href="usbd_video.html" /> 
+    <link rel="next" title="WebUSB Device" href="usbd_webusb.html" />
+    <link rel="prev" title="USB Video Device" href="usbd_video.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,10 +48,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../quick_start/demo.html">基于现有 demo 快速验证</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start/transplant.html">芯片通用移植指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start/rtthread.html">基于 RT-Thread 软件包开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quick_start/esp.html">基于 ESP-Registry 开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../q%26a.html">Q &amp; A</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../opensource.html">官方开源项目分享</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../share.html">开发者经验/开源项目分享</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/q%26a.html">Q &amp; A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/migration.html">部分改动迁移指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/opensource.html">基于 CherryUSB 的开源项目</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">USB 基本知识点</span></p>
 <ul>
@@ -78,27 +77,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../class/class_video.html">UVC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../class/winusb.html">WINUSB</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">例程说明</span></p>
+<p class="caption" role="heading"><span class="caption-text">例程</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="usbd_cdc_acm.html">usbd_cdc_acm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_hid.html">usbd_hid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_msc.html">usbd_msc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_rndis.html">usbd_rndis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_ecm.html">usbd_cdc_ecm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_audiov1.html">usbd_audiov1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_audiov2.html">usbd_audiov2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_video.html">usbd_video</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">usbd_winusb</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_webusb.html">usbd_webusb</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_adb.html">usbd_adb</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_serial.html">usbh_serial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_hid.html">usbh_hid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_msc.html">usbh_msc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_net.html">usbh_net</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_bluetooth.html">usbh_bluetooth</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_wifi.html">usbh_wifi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbd_vendor.html">vendor device 驱动编写</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usbh_vendor.html">vendor host 驱动编写</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_cdc_acm.html">CDC ACM Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_hid.html">HID Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_msc.html">MSC Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_audiov1.html">AudioV1 Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_audiov2.html">AudioV2 Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_video.html">USB Video Device</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WinUSB Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_webusb.html">WebUSB Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_rndis.html">CDC RNDIS Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_ecm.html">CDC ECM Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_adb.html">ADB Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_mtp.html">MTP Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_serial.html">Serial Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_hid.html">HID Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_msc.html">MSC Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_net.html">Network Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_bluetooth.html">BTBLE Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_wifi.html">WIFI Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_audio.html">Audio Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_video.html">Video Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usb_otg.html">USB OTG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbd_vendor.html">Vendor Device 驱动编写</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usbh_vendor.html">Vendor Host 驱动编写</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">USBIP 介绍</span></p>
 <ul>
@@ -120,7 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html#wireshark">Wireshark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html#audacity">Audacity</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">版本说明</span></p>
+<p class="caption" role="heading"><span class="caption-text">Release Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../version.html">版本说明</a></li>
 </ul>
@@ -147,7 +150,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">usbd_winusb</li>
+      <li class="breadcrumb-item active">WinUSB Device</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/demo/usbd_winusb.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -157,20 +160,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="usbd-winusb">
-<h1>usbd_winusb<a class="headerlink" href="#usbd-winusb" title="Link to this heading"></a></h1>
-<p>本节主要介绍 winusb 驱动。winusb 是 windows 为了让用户友好的访问 USB 自定义类设备提供的一套通用驱动，其实本质就是 CDC ACM。
-WINUSB 版本根据 USB 版本分为 V1/V2 版本，V2 版本需要包含 BOS 描述符，V1 版本不需要。V2 版本需要在设备描述符中设置为 USB2.1 的版本号。</p>
+  <section id="winusb-device">
+<h1>WinUSB Device<a class="headerlink" href="#winusb-device" title="Link to this heading"></a></h1>
+<p>本节主要介绍 winusb 驱动。winusb 是 windows 为了让用户友好的访问 USB 自定义类设备提供的一套通用驱动，其实本质就是 CDC ACM，只不过没有设置波特率的命令。
+WINUSB 版本根据 USB 版本分为 V1/V2 版本，V2 版本需要包含 BOS 描述符，V1 版本不需要。 <strong>V2 版本需要在设备描述符中设置为 USB2.1 的版本号</strong>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>更换 winusb 描述符任意配置可能会枚举成功但是无法识别设备，需要删除 计算机HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlusbflags 下所有注册表项，重新插拔设备后生效。</p>
+</div>
 <ul class="simple">
 <li><p>V1 版本注册描述符</p></li>
 </ul>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">usbd_msosv1_desc_register</span><span class="p">(</span><span class="n">busid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msosv1_desc</span><span class="p">);</span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">usb_descriptor</span><span class="w"> </span><span class="n">winusbv1_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">.</span><span class="n">device_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">config_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">device_quality_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device_quality_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">string_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">string_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">msosv1_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msosv1_desc</span>
+<span class="p">};</span>
+
+<span class="n">OR</span>
+
+<span class="nf">usbd_msosv1_desc_register</span><span class="p">(</span><span class="n">busid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msosv1_desc</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>V2 版本注册描述符</p></li>
 </ul>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">usbd_bos_desc_register</span><span class="p">(</span><span class="n">busid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bos_desc</span><span class="p">);</span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">usb_descriptor</span><span class="w"> </span><span class="n">winusbv2_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">.</span><span class="n">device_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">config_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">device_quality_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device_quality_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">string_descriptor_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">string_descriptor_callback</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">msosv2_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msosv2_desc</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">bos_descriptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bos_desc</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="n">OR</span>
+
+<span class="nf">usbd_bos_desc_register</span><span class="p">(</span><span class="n">busid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bos_desc</span><span class="p">);</span>
 <span class="n">usbd_msosv2_desc_register</span><span class="p">(</span><span class="n">busid</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msosv2_desc</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -186,7 +214,7 @@ WINUSB 版本根据 USB 版本分为 V1/V2 版本，V2 版本需要包含 BOS �
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>其余操作与 CDC ACM 相同，不再赘述</p></li>
+<li><p>读写操作与 CDC ACM 相同，不再赘述</p></li>
 </ul>
 </section>
 
@@ -194,14 +222,14 @@ WINUSB 版本根据 USB 版本分为 V1/V2 版本，V2 版本需要包含 BOS �
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="usbd_video.html" class="btn btn-neutral float-left" title="usbd_video" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="usbd_webusb.html" class="btn btn-neutral float-right" title="usbd_webusb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="usbd_video.html" class="btn btn-neutral float-left" title="USB Video Device" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usbd_webusb.html" class="btn btn-neutral float-right" title="WebUSB Device" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022 ~ 2025, sakumisu.</p>
+    <p>&#169; Copyright 2022 ~ 2026, sakumisu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
